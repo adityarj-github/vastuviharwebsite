@@ -1,0 +1,190 @@
+/* =========================================================
+   SHARED AMENITY CARD
+   Replaces the individual Elementor IDs
+========================================================= */
+
+.elementor-2178 .amenities-grid {
+  --display: grid;
+  --e-con-grid-template-columns: repeat(4, 1fr);
+  --gap: 110px 30px;
+  --row-gap: 110px;
+  --column-gap: 30px;
+  --grid-auto-flow: row;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+
+/* CARD */
+
+.elementor-2178 .amenity-card {
+  --display: flex;
+  --align-items: center;
+  --container-widget-width: calc((1 - var(--container-widget-flex-grow)) * 100%);
+
+  position: relative;
+
+  border-radius: 30px;
+
+  padding-top: 0;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  background-color: transparent;
+  background-image: linear-gradient(180deg,
+      #f6f3ec 0%,
+      rgba(246, 243, 236, 0) 100%);
+}
+
+
+/* TOP DECORATIVE CURVE */
+
+.elementor-2178 .amenity-card-decor {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  margin-bottom: -20px;
+
+  pointer-events: none;
+}
+
+.elementor-2178 .amenity-card-decor .elementor-icon-wrapper {
+  text-align: center;
+}
+
+.elementor-2178 .amenity-card-decor .elementor-icon {
+  font-size: 47px;
+}
+
+.elementor-2178 .amenity-card-decor svg {
+  width: auto;
+  height: 47px;
+}
+
+h3.elementor-heading-title {
+  color: black;
+}
+
+/* CONTENT */
+
+.elementor-2178 .amenity-icon-box {
+  position: relative;
+  z-index: 1;
+
+  width: 100%;
+
+  margin-top: -45px;
+
+  --icon-box-icon-margin: 30px;
+}
+
+.elementor-2178 .amenity-icon-box .elementor-icon-box-wrapper {
+  text-align: center;
+}
+
+
+/* MAIN ICON */
+
+.elementor-2178 .amenity-icon-box .elementor-icon-box-icon {
+  margin-bottom: 30px;
+}
+
+.elementor-2178 .amenity-icon-box .elementor-icon {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 80px;
+  height: 80px;
+
+  border-radius: 50%;
+
+  font-size: 40px;
+
+  color: var(--e-global-color-accent);
+  fill: var(--e-global-color-accent);
+
+  background: #ffffff;
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.elementor-2178 .amenity-icon-box .elementor-icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+
+/* TITLE */
+
+.elementor-2178 .amenity-icon-box .elementor-icon-box-title {
+  margin: 0 0 6px;
+
+  color: var(--e-global-color-accent);
+
+  font-size: 17px;
+  font-weight: 600;
+}
+
+
+/* DESCRIPTION */
+
+.elementor-2178 .amenity-icon-box .elementor-icon-box-description {
+  margin: 0;
+
+  color: var(--e-global-color-text_light);
+
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+
+/* HOVER */
+
+.elementor-2178 .amenity-card:hover .elementor-icon {
+  transform: scale(1.1);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1024px) {
+  .elementor-2178 .amenities-grid {
+    --e-con-grid-template-columns: repeat(3, 1fr);
+    --gap: 60px 30px;
+    --row-gap: 60px;
+    --column-gap: 30px;
+  }
+}
+
+
+@media (max-width: 880px) {
+  .elementor-2178 .amenities-grid {
+    --e-con-grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+@media (max-width: 767px) {
+  .elementor-2178 .amenities-grid {
+    --e-con-grid-template-columns: repeat(1, 1fr);
+    --gap: 60px;
+  }
+
+  .elementor-2178 .amenity-card {
+    width: 100%;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

@@ -1,0 +1,90 @@
+/* Container holding all the award cards */
+.elementor-element-60db682 {
+  display: flex !important;
+  flex-direction: row !important; /* Forces elements into a row */
+  flex-wrap: wrap; /* Allows wrapping if screen gets too small */
+  justify-content: center !important; /* Centers the row perfectly */
+  align-items: stretch;
+  gap: 40px;
+  width: 100%;
+}
+
+/* Individual Award Card */
+.box-img-hover {
+  /* Override Elementor's default 100% width so they can sit side-by-side */
+  width: auto !important; 
+  flex: 0 1 220px !important; /* Sets base width to 220px and allows them to sit in a row */
+  
+  display: flex;
+  flex-direction: column; /* Keeps the image above the text inside the card */
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  gap: 20px;
+  padding: 32px 24px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Award Image Wrapper */
+.elementor-widget-image {
+  width: 100%;
+}
+
+.elementor-widget-image .elementor-widget-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 140px; /* Fixed height to keep the cards perfectly aligned */
+  width: 100%;
+}
+
+.elementor-widget-image img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain; /* Prevents logos/images from stretching */
+}
+
+/* Award Title */
+.elementor-widget-heading {
+  width: 100%;
+}
+
+.elementor-heading-title {
+  margin: 0;
+  color: #111 !important;
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+/* Responsive adjustments for Tablets and Mobile */
+@media (max-width: 1024px) {
+  .elementor-element-60db682 {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .elementor-element-60db682 {
+    display: grid !important; /* Switch back to grid on mobile for perfect 2x2 layout */
+    grid-template-columns: repeat(2, 1fr) !important; 
+    gap: 16px;
+  }
+
+  .box-img-hover {
+    width: 100% !important; /* Reset width for the mobile grid */
+    flex: none !important;
+    padding: 20px 12px;
+    gap: 12px;
+  }
+
+  .elementor-widget-image .elementor-widget-container {
+    height: 100px;
+  }
+
+  .elementor-heading-title {
+    font-size: 0.875rem; /* 14px */
+  }
+}

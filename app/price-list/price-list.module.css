@@ -1,0 +1,658 @@
+
+.page {
+    background: #fff;
+    color: #111;
+}
+
+.container {
+    width: min(1730px, calc(100% - 60px));
+    margin: 0 auto;
+}
+
+.kicker {
+    display: inline-flex;
+    align-items: center;
+    min-height: 32px;
+    padding: 4px 16px;
+    border: 1px solid currentColor;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: #0ea5e9;
+}
+
+/* =========================================
+   INTRO SECTION
+========================================= */
+
+.intro {
+    padding: 60px 0 90px;
+}
+
+.introGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+.intro h2,
+.sectionHead h2 {
+    margin: 16px 0 0;
+    max-width: 720px;
+    font-size: clamp(2rem, 3.5vw, 2.75rem);
+    line-height: 1.1;
+    letter-spacing: -.03em;
+}
+
+.introCopy {
+    align-self: end;
+}
+
+.introCopy > p {
+    max-width: 650px;
+    margin: 0 0 32px;
+    color: #565656;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* =========================================
+   SEARCH
+========================================= */
+
+.searchBox {
+    position: relative;
+    margin-bottom: 32px;
+}
+
+.searchInput {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 13px 15px 13px 50px !important;
+    border-radius: 5px !important;
+    font-size: 1rem;
+    color: #111;
+    background: #fff;
+    border: 1px solid #ddd;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.searchInput::placeholder {
+    color: #999;
+}
+
+.searchInput:focus {
+    border-color: #0ea5e9;
+    outline: none !important;
+}
+
+.searchIcon {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+    pointer-events: none;
+}
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.emptyState {
+    text-align: center;
+    padding: 80px 20px 120px;
+    color: #111;
+}
+
+.emptyState h3 {
+    margin: 0 0 12px;
+    font-size: 1.5rem;
+}
+
+.emptyState p {
+    margin: 0;
+    color: #666;
+    font-size: 1rem;
+}
+
+/* =========================================
+   STATISTICS
+========================================= */
+
+.stats {
+    display: flex;
+    border-top: 1px solid #dedede;
+}
+
+.stats > div {
+    min-width: 110px;
+    padding: 16px 24px 0 0;
+}
+
+.stats strong {
+    display: block;
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.stats span {
+    display: block;
+    margin-top: 6px;
+    color: #777;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+}
+
+/* =========================================
+   PROJECT SECTIONS
+========================================= */
+
+.projectsWrapper {
+    width: 100%;
+    padding-bottom: 80px;
+}
+
+.projects {
+    padding: 60px 0 90px;
+    border-top: 1px solid #eee;
+}
+
+.projects:first-child {
+    border-top: none;
+}
+
+.sectionHead {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 30px;
+    padding-bottom: 24px;
+    margin-bottom: 40px;
+}
+
+.count {
+    color: #777;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+}
+
+/* =========================================
+   STATE-WISE ACCORDION
+========================================= */
+
+.accordionTrigger {
+    width: 100%;
+    font: inherit;
+    color: inherit;
+    text-align: left;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.accordionTrigger:hover,
+.accordionTrigger:active {
+    background: transparent;
+    color: inherit;
+}
+
+.accordionTrigger:focus {
+    background: transparent;
+}
+
+.accordionTrigger:focus-visible {
+    outline: 2px solid #0ea5e9;
+    outline-offset: 4px;
+}
+
+.accordionTitle {
+    display: block;
+    min-width: 0;
+}
+
+.accordionRight {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-shrink: 0;
+}
+
+.accordionIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    border: 1px solid #dedede;
+    border-radius: 50%;
+    color: #111;
+    background: transparent;
+    transition:
+        border-color 0.3s ease,
+        color 0.3s ease;
+}
+
+.accordionIcon svg {
+    transition: transform 0.3s ease;
+}
+
+.accordionIconOpen svg {
+    transform: rotate(180deg);
+}
+
+.accordionTrigger:hover .accordionIcon {
+    border-color: #0ea5e9;
+    color: #0ea5e9;
+}
+
+.accordionContent {
+    width: 100%;
+}
+
+.accordionContent[hidden] {
+    display: none !important;
+}
+
+/* Closed state section spacing */
+
+.projectsClosed {
+    padding-bottom: 30px;
+}
+
+.projectsClosed .sectionHead {
+    margin-bottom: 0;
+}
+
+.projectsOpen .sectionHead {
+    margin-bottom: 40px;
+}
+
+/* =========================================
+   CITY GRID
+========================================= */
+
+.cityGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    align-items: stretch;
+}
+
+/* =========================================
+   UNIVERSAL CARD DESIGN
+========================================= */
+
+.cityCard {
+    --box_icon: 50px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0 30px 30px 30px;
+    background-color: #F5F5F5;
+    min-height: 320px;
+    height: 100%;
+    transition: all 0.4s ease;
+    overflow: hidden;
+}
+
+.cityCard::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--box_icon);
+    height: var(--box_icon);
+    border-radius: 100%;
+    background: #0ea5e9;
+    transform: scale3d(1, 1, 1);
+    transition: all 0.8s ease;
+    z-index: 0;
+}
+
+.cityCard:hover::after {
+    transform: scale3d(45, 45, 1);
+}
+
+/* =========================================
+   CARD CIRCLE
+========================================= */
+
+.cardCircle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: var(--box_icon);
+    height: var(--box_icon);
+    border-radius: 50%;
+    background-color: #0ea5e9;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+    z-index: 4;
+    transition: all 0.4s ease;
+    opacity: 1;
+}
+
+.cityCard:hover .cardCircle {
+    transform: scale(0.95);
+}
+
+.circleNumber {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition:
+        opacity 0.3s ease,
+        transform 0.4s ease;
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.locationIcon {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    color: #ffffff;
+    opacity: 0;
+    transform: translateY(10px) scale(0.7);
+    transition:
+        opacity 0.3s ease,
+        transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+    pointer-events: none;
+}
+
+.cityCard:hover .circleNumber {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.7);
+}
+
+.cityCard:hover .locationIcon {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* =========================================
+   CARD DECORATIVE BORDER
+========================================= */
+
+.decorBorder {
+    position: absolute;
+    width: calc(var(--box_icon) + 10px);
+    height: calc(var(--box_icon) + 10px);
+    background-color: #fff;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    border-bottom-right-radius: 30px;
+}
+
+.decorBorder::before,
+.decorBorder::after {
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    width: 30px;
+    height: 30px;
+    clip-path: path("M0 0 Q0,30 30,30 L 0 30 Z");
+}
+
+.decorBorder::before {
+    top: 100%;
+    left: 0;
+    transform: rotate(90deg);
+}
+
+.decorBorder::after {
+    top: 0;
+    left: 100%;
+    transform: rotate(90deg);
+}
+
+/* =========================================
+   CARD CONTENT
+========================================= */
+
+.cardContent {
+    position: relative;
+    z-index: 3;
+    padding: 70px 30px 36px 36px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 100%;
+}
+
+.cityState {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #0ea5e9;
+    margin-bottom: 8px;
+    transition: color 0.4s ease;
+}
+
+.cityCard:hover .cityState,
+.cityCard:hover .cityName,
+.cityCard:hover .phaseItem,
+.cityCard:hover .phaseEmpty {
+    color: #fff;
+}
+
+.cityName {
+    font-size: 24px;
+    font-weight: 700;
+    color: #111;
+    margin: 0 0 20px 0;
+    transition: color 0.4s ease;
+}
+
+/* =========================================
+   PHASE GRID
+========================================= */
+
+.phaseGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    transition: border-color 0.4s ease;
+}
+
+.cityCard:hover .phaseGrid {
+    border-top-color: rgba(255, 255, 255, 0.2);
+}
+
+.phaseItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #444;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.phaseItem svg {
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.phaseItem:hover svg {
+    transform: translate(3px, -3px);
+}
+
+/* =========================================
+   UPCOMING PROJECTS
+========================================= */
+
+.phaseEmpty {
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px dashed rgba(0, 0, 0, 0.12);
+    font-size: 13px;
+    font-weight: 500;
+    color: #888;
+    display: flex;
+    align-items: center;
+    transition:
+        color 0.4s ease,
+        border-top-color 0.4s ease;
+}
+
+.cityCard:hover .phaseEmpty {
+    border-top-color: rgba(255, 255, 255, 0.25);
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1024px) {
+    .introGrid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .cityGrid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        padding-bottom: 0;
+    }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 767px) {
+    .container {
+        width: min(100% - 30px, 1730px);
+    }
+
+    .intro {
+        padding: 40px 0 60px;
+    }
+
+    .introGrid {
+        gap: 24px;
+    }
+
+    .intro h2,
+    .sectionHead h2 {
+        font-size: 1.75rem;
+    }
+
+    .stats {
+        justify-content: space-between;
+    }
+
+    .stats > div {
+        min-width: 0;
+        padding-right: 18px;
+    }
+
+    .projects {
+        padding: 40px 0 60px;
+    }
+
+    .projectsClosed {
+        padding-bottom: 24px;
+    }
+
+    .sectionHead {
+        gap: 12px;
+    }
+
+    .accordionRight {
+        gap: 12px;
+    }
+
+    .accordionIcon {
+        width: 36px;
+        height: 36px;
+    }
+
+    .accordionIcon svg {
+        width: 19px;
+        height: 19px;
+    }
+
+    .count {
+        font-size: 0.75rem;
+        white-space: nowrap;
+    }
+
+    .cityGrid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+        padding-bottom: 0;
+    }
+
+    .cityState {
+        margin-top: 12px;
+    }
+
+    .cardContent {
+        padding: 60px 18px 20px 18px;
+    }
+
+    .cityName {
+        font-size: 18px;
+    }
+
+    .phaseGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .decorBorder {
+        border-bottom-right-radius: 20px;
+    }
+
+    .cityCard {
+        border-radius: 0 20px 20px 20px;
+        min-height: 260px;
+    }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+    .cityGrid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .cityCard {
+        min-height: 240px;
+    }
+
+    .accordionRight {
+        gap: 8px;
+    }
+
+    .accordionIcon {
+        width: 34px;
+        height: 34px;
+    }
+}

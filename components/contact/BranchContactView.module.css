@@ -1,0 +1,1010 @@
+.directory,
+.directory * {
+  box-sizing: border-box;
+}
+
+.directory {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 65px 28px 110px;
+  color: #1c1c1c;
+  font-family: inherit;
+}
+
+.filters {
+  display: grid;
+  grid-template-columns: minmax(0, 1.8fr) minmax(175px, 1fr) minmax(175px, 1fr);
+  align-items: end;
+  gap: 15px;
+  padding: 22px;
+  border: 1px solid #daf7fe;
+  background: #f3f6f7;
+}
+
+.field {
+  min-width: 0;
+}
+
+.fieldLabel {
+  display: block;
+  margin: 0 0 10px;
+  color: #262626;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.inputWrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 52px;
+  border: 1px solid #dad8d3;
+  background: #fff;
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+.inputWrap:focus-within {
+  border-color: #08AAEC;
+  box-shadow: 0 0 0 1px #5492a1;
+}
+
+.inputIcon {
+  margin-left: 15px;
+  color: #08AAEC;
+  display: inline-flex;
+  flex-shrink: 0;
+}
+
+.input {
+  flex: 1;
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  padding: 0 12px;
+  background: transparent !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none;
+  border-radius: 0;
+  font: inherit;
+  font-size: 14px;
+  color: #1f1f1f;
+}
+
+.input::placeholder {
+  color: #95918b;
+  opacity: 1;
+}
+
+.select {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 100%;
+  height: 100%;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 0 42px 0 15px;
+  background: transparent !important;
+  font: inherit;
+  font-size: 14px;
+  color: #222222;
+  outline: none !important;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+.selectIcon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-flex;
+  color: #08AAEC;
+  pointer-events: none;
+}
+
+.clearInput {
+  flex-shrink: 0;
+  background: transparent;
+  border: 0;
+  padding: 8px;
+  margin-right: 4px;
+  color: #777;
+  cursor: pointer;
+}
+
+.clearInput:hover {
+  color: #222222;
+}
+
+.resultsInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #e2e6e8;
+  padding: 22px 0 21px;
+  margin: 0 0 37px;
+}
+
+.resultsInfo p {
+  margin: 0;
+  color: #6b7377;
+  font-size: 13px;
+}
+
+.resultsInfo strong {
+  color: #222222;
+}
+
+.reset {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border: 0;
+  background: none;
+  color: #292929;
+  padding: 5px 0;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.reset:hover {
+  color: #08AAEC;
+}
+
+.results {
+  display: block;
+}
+
+.stateSection {
+  margin: 0 0 62px;
+}
+
+.stateHeading {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin: 0 0 30px;
+  padding: 0 0 17px;
+  border-bottom: 1px solid #e8e6e2;
+}
+
+.stateHeading h2 {
+  font-family: inherit;
+  color: #171717;
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 500;
+  margin: 0;
+}
+
+.stateHeading>span {
+  display: inline-flex;
+  padding: 6px 10px;
+  background: #f3f1ee;
+  color: #6a6257;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.citySection {
+  margin-bottom: 39px;
+}
+
+.cityHeading {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 17px;
+}
+
+.cityHeading h3 {
+  font-family: inherit;
+  font-size: 19px;
+  line-height: 1.4;
+  font-weight: 500;
+  color: #2a2a2a;
+  margin: 0;
+}
+
+.cityHeading span {
+  font-size: 12px;
+  color: #8b8580;
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border: 1px solid #e6e4df;
+  border-top: 3px solid #08AAEC;
+  border-radius: 6px;
+  transition: transform .35s ease, border-color .35s ease, box-shadow .35s ease, background-color .35s ease;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #08AAEC;
+  clip-path: circle(0% at 0 0);
+  -webkit-clip-path: circle(0% at 0 0);
+  transition: clip-path 0.65s cubic-bezier(0.25, 1, 0.5, 1), -webkit-clip-path 0.65s cubic-bezier(0.25, 1, 0.5, 1);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.card:hover {
+  background-color: #08AAEC !important;
+  border-color: #08AAEC !important;
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(8, 170, 236, 0.35);
+}
+
+.card:hover::before {
+  clip-path: circle(150% at 0 0);
+  -webkit-clip-path: circle(150% at 0 0);
+}
+
+.cardTop {
+  position: relative;
+  z-index: 2;
+  padding: 23px 23px 14px;
+}
+
+.cardEyebrow {
+  display: block;
+  color: #08AAEC;
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+  margin-bottom: 9px;
+  transition: color .3s ease, opacity .3s ease;
+}
+
+.cardTitle {
+  font-family: inherit;
+  color: #1b1b1b;
+  margin: 0;
+  font-weight: 550;
+  font-size: 21px;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+  transition: color .3s ease;
+}
+
+.cardDetails {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 0 23px 23px;
+  flex: 1;
+}
+
+.detail {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #686868;
+  transition: color .3s ease;
+}
+
+.detail p {
+  font: inherit;
+  color: inherit;
+  margin: 0;
+  overflow-wrap: anywhere;
+  transition: color .3s ease;
+}
+
+.detail a {
+  color: #292929;
+  font-size: inherit;
+  line-height: inherit;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+  transition: color .3s ease;
+}
+
+.detail a:hover {
+  color: #08AAEC;
+}
+
+.detailIcon {
+  display: inline-flex;
+  flex-shrink: 0;
+  color: #08AAEC;
+  margin-top: 2px;
+  transition: color .3s ease;
+}
+
+.detailIcon svg {
+  stroke: currentColor;
+  transition: stroke .3s ease;
+}
+
+.phoneList {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3px;
+  min-width: 0;
+}
+
+.phoneList span {
+  color: #555;
+  transition: color .3s ease;
+}
+
+.phoneList a {
+  color: #292929;
+  text-decoration: none;
+  transition: color .3s ease;
+}
+
+.phoneList a:hover {
+  text-decoration: underline;
+}
+
+.people {
+  padding-top: 12px;
+  margin-top: 2px;
+  border-top: 1px solid #f0eeea;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: border-color .3s ease;
+}
+
+.person {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.person>div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.person strong {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #232323;
+  transition: color .3s ease;
+}
+
+.person small {
+  font-size: 12px;
+  color: #797d80;
+  transition: color .3s ease;
+}
+
+.person a,
+.person span:not(:first-child) {
+  font-size: 13px;
+  color: #4e4e4e;
+  text-decoration: none;
+  transition: color .3s ease;
+}
+
+.person a:hover {
+  color: #08AAEC;
+}
+
+.mapLink {
+  margin-top: auto;
+  padding: 16px 23px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  background: #f9f8f6;
+  color: #08AAEC;
+  border-top: 1px solid #eae7e2;
+  font-size: 12px;
+  font-weight: 650;
+  text-decoration: none;
+  transition: background-color .3s ease, color .3s ease, border-color .3s ease;
+}
+
+.mapLink:hover {
+  background: #232323;
+  color: #fff;
+}
+
+/* =========================================
+   CARD HOVER STATE (SOLID BLUE BG + WHITE TEXT)
+========================================= */
+.card:hover .cardEyebrow {
+  color: #ffffff !important;
+  opacity: 0.95;
+}
+
+.card:hover .cardTitle {
+  color: #ffffff !important;
+}
+
+.card:hover .detail {
+  color: #ffffff !important;
+}
+
+.card:hover .detail p {
+  color: #ffffff !important;
+}
+
+.card:hover .detail a {
+  color: #ffffff !important;
+}
+
+.card:hover .detail a:hover {
+  text-decoration: underline;
+  color: #ffffff !important;
+}
+
+.card:hover .detailIcon {
+  color: #ffffff !important;
+}
+
+.card:hover .detailIcon svg {
+  stroke: #ffffff !important;
+}
+
+.card:hover .phoneList span,
+.card:hover .phoneList a {
+  color: #ffffff !important;
+}
+
+.card:hover .people {
+  border-top-color: rgba(255, 255, 255, 0.28) !important;
+}
+
+.card:hover .peopleTitle {
+  color: #ffffff !important;
+  opacity: 0.95;
+}
+
+.card:hover .person strong {
+  color: #ffffff !important;
+}
+
+.card:hover .person small {
+  color: rgba(255, 255, 255, 0.88) !important;
+}
+
+.card:hover .person a,
+.card:hover .person span:not(:first-child) {
+  color: #ffffff !important;
+}
+
+.card:hover .mapLink {
+  background: rgba(0, 0, 0, 0.16) !important;
+  color: #ffffff !important;
+  border-top-color: rgba(255, 255, 255, 0.25) !important;
+}
+
+.card:hover .mapLink svg {
+  stroke: #ffffff !important;
+}
+
+.card:hover .cardActions {
+  background: rgba(0, 0, 0, 0.16) !important;
+  border-top-color: rgba(255, 255, 255, 0.25) !important;
+}
+
+.card:hover .mapButton,
+.card:hover .cardActions .mapLink {
+  color: #ffffff !important;
+  border-right-color: rgba(255, 255, 255, 0.25) !important;
+}
+
+.card:hover .mapButton svg,
+.card:hover .cardActions .mapLink svg {
+  stroke: #ffffff !important;
+}
+
+.card:hover .mapButton:hover,
+.card:hover .cardActions .mapLink:hover {
+  background: #ffffff !important;
+  color: #08AAEC !important;
+}
+
+.card:hover .mapButton:hover svg,
+.card:hover .cardActions .mapLink:hover svg {
+  stroke: #08AAEC !important;
+}
+
+.card:hover .mapLink:hover {
+  background: #ffffff !important;
+  color: #08AAEC !important;
+}
+
+.card:hover .mapLink:hover svg {
+  stroke: #08AAEC !important;
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  padding: 45px 15px;
+  background: #f8f7f5;
+  text-align: center;
+  color: #616e73;
+}
+
+.empty h2 {
+  margin: 15px 0 3px;
+  font-size: 21px;
+  font-weight: 500;
+  color: #222;
+}
+
+.empty p {
+  margin: 0 0 20px;
+  font-size: 13px;
+}
+
+.empty button {
+  background: #222;
+  padding: 12px 20px;
+  color: #fff;
+  border: 0;
+  cursor: pointer;
+}
+
+.empty button:hover {
+  background: #08AAEC;
+}
+
+@media (max-width: 990px) {
+  .filters {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .field:first-child {
+    grid-column: 1 / -1;
+  }
+
+  .cardGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .directory {
+    padding: 28px 16px 65px;
+  }
+
+  .filters {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding: 16px;
+  }
+
+  .field:first-child {
+    grid-column: auto;
+  }
+
+  .inputWrap {
+    height: 49px;
+  }
+
+  .resultsInfo {
+    padding: 17px 0;
+    margin-bottom: 26px;
+  }
+
+  .stateSection {
+    margin-bottom: 45px;
+  }
+
+  .stateHeading {
+    margin-bottom: 22px;
+  }
+
+  .stateHeading h2 {
+    font-size: 24px;
+  }
+
+  .cityHeading h3 {
+    font-size: 18px;
+  }
+
+  .cardGrid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    gap: 14px;
+    padding: 6px 16px 20px 16px;
+    margin: 0 -16px;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(8, 170, 236, 0.4) transparent;
+  }
+
+  .cardGrid::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .cardGrid::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .cardGrid::-webkit-scrollbar-thumb {
+    background: rgba(8, 170, 236, 0.4);
+    border-radius: 4px;
+  }
+
+  .cardGrid > .card {
+    flex: 0 0 84%;
+    min-width: 270px;
+    max-width: 320px;
+    scroll-snap-align: start;
+    scroll-snap-stop: normal;
+    height: auto;
+  }
+
+  .cardTop {
+    padding: 21px 20px 13px;
+  }
+
+  .cardDetails {
+    padding: 0 20px 19px;
+  }
+
+  .mapLink {
+    padding: 15px 20px;
+  }
+
+  .card:hover {
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .card,
+  .inputWrap,
+  .mapLink {
+    transition: none;
+  }
+}
+
+/* Branch-specific contact details and on-demand map controls. */
+.peopleTitle {
+  display: block;
+  font-size: 11px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: #08AAEC;
+  font-weight: 700;
+  margin: 0 0 3px;
+}
+
+.personInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.personInfo .phoneList {
+  gap: 2px;
+  margin-top: 3px;
+}
+
+.personInfo .phoneList a {
+  font-size: 13px;
+  color: #3b3b3b;
+}
+
+.personInfo .phoneList a:hover {
+  color: #08AAEC;
+}
+
+.cardActions {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) 62px;
+  margin-top: auto;
+  background: #f9f8f6;
+  border-top: 1px solid #eae7e2;
+  transition: background-color .3s ease, border-color .3s ease;
+}
+
+.mapButton,
+.cardActions .mapLink {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  border: 0;
+  padding: 17px 14px;
+  min-width: 0;
+  margin: 0;
+  border-radius: 0;
+  background: transparent;
+  text-align: left;
+  color: #2b2b2b;
+  font: inherit;
+  font-size: 12px;
+  line-height: 1.4;
+  font-weight: 650;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color .2s, color .2s;
+}
+
+.mapButton {
+  border-right: 1px solid #eae7e2;
+}
+
+.mapButton:hover,
+.cardActions .mapLink:hover {
+  background: #242424;
+  color: #fff;
+}
+
+.mapButton:focus-visible,
+.cardActions .mapLink:focus-visible {
+  outline: 2px solid #08AAEC;
+  outline-offset: -2px;
+}
+
+.mapPanel {
+  position: relative;
+  z-index: 2;
+  padding: 12px;
+  border-top: 1px solid #eae7e2;
+  background: #fff;
+}
+
+.mapPanel iframe {
+  width: 100%;
+  min-height: 230px;
+  height: 230px;
+  display: block;
+  border: 0;
+  background: #f4f2ef;
+}
+
+@media (max-width: 640px) {
+
+  .mapButton,
+  .cardActions .mapLink {
+    padding: 15px 16px;
+  }
+
+  .mapPanel iframe {
+    height: 220px;
+    min-height: 220px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .mapButton,
+  .cardActions .mapLink {
+    transition: none;
+  }
+}
+/* =========================================
+   COPY BRANCH LOCATION - THIRD CARD ACTION
+   Matches existing solid-blue card hover theme.
+========================================= */
+.cardActions .copyButton {
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
+  align-self: center;
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  padding: 0;
+  border: 1px solid rgba(8, 170, 236, .26);
+  border-radius: 50%;
+  background: #ffffff;
+  color: #08AAEC;
+  cursor: pointer;
+  transition: background-color .25s ease, color .25s ease,
+    border-color .25s ease, transform .25s ease;
+}
+
+.cardActions .copyButton svg {
+  display: block;
+  flex-shrink: 0;
+  stroke: currentColor;
+}
+
+.cardActions .copyButton:hover {
+  background: #08AAEC;
+  border-color: #08AAEC;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Keep the icon visible against the card's blue hover fill. */
+.card:hover .cardActions .copyButton {
+  background: rgba(255, 255, 255, .13);
+  border-color: rgba(255, 255, 255, .65);
+  color: #ffffff;
+}
+
+.card:hover .cardActions .copyButton:hover {
+  background: #ffffff;
+  border-color: #ffffff;
+  color: #08AAEC;
+}
+
+.card:hover .cardActions .copyButton svg,
+.card:hover .cardActions .copyButton:hover svg {
+  stroke: currentColor;
+}
+
+.cardActions .copyButton:focus-visible {
+  outline: 2px solid #08AAEC;
+  outline-offset: 3px;
+}
+
+.copyFeedback {
+  position: relative;
+  z-index: 2;
+  display: block;
+  padding: 8px 18px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #078fc7;
+  background: #f9f8f6;
+}
+
+.card:hover .copyFeedback {
+  color: #ffffff;
+  background: rgba(0, 0, 0, .16);
+}
+
+@media (max-width: 640px) {
+  .cardActions {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) 54px;
+  }
+
+  .mapButton,
+  .cardActions .mapLink {
+    padding: 15px 10px;
+    font-size: 11px;
+  }
+
+  .cardActions .copyButton {
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cardActions .copyButton {
+    transition: none;
+  }
+}
+/* =========================================
+   STATE ACCORDION (single open state)
+   Existing contact card styling is unchanged.
+========================================= */
+.accordionTrigger {
+  width: 100%;
+  font: inherit;
+  text-align: left;
+  color: inherit;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #e8e6e2;
+  border-radius: 0;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.accordionTrigger:hover,
+.accordionTrigger:active,
+.accordionTrigger:focus {
+  background: transparent;
+  color: inherit;
+}
+
+.accordionTrigger:focus-visible {
+  outline: 2px solid #08AAEC;
+  outline-offset: 4px;
+}
+
+.accordionTrigger .accordionIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  width: 40px;
+  height: 40px;
+  flex: 0 0 40px;
+  padding: 0;
+  background: transparent;
+  border: 1px solid #e8e6e2;
+  border-radius: 50%;
+  color: #171717;
+  transition: color .25s ease, border-color .25s ease;
+}
+
+.accordionIcon svg {
+  transition: transform .25s ease;
+}
+
+.accordionIconOpen svg {
+  transform: rotate(180deg);
+}
+
+.accordionTrigger:hover .accordionIcon {
+  color: #08AAEC;
+  border-color: #08AAEC;
+}
+
+.accordionContent[hidden] {
+  display: none !important;
+}
+
+.stateSection:has(.accordionContent[hidden]) {
+  margin-bottom: 22px;
+}
+
+.stateSection:has(.accordionContent[hidden]) .stateHeading {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .accordionTrigger .accordionIcon {
+    width: 36px;
+    height: 36px;
+    flex-basis: 36px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .accordionIcon svg,
+  .accordionTrigger .accordionIcon {
+    transition: none;
+  }
+}

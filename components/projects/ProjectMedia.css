@@ -1,0 +1,367 @@
+/* =========================================================
+   PROJECT MEDIA
+   Keep original Spaciaz spacing / alignment
+========================================================= */
+
+:global(.vv-project-media).mediaScope {
+  overflow: visible;
+  margin-bottom: 60px;
+}
+
+:global(.vv-project-media).mediaScope
+  > :global(.e-con-inner).mediaScope {
+  display: block;
+  width: 100%;
+}
+
+
+/* =========================================================
+   WIDGET
+========================================================= */
+
+:global(.vv-media-widget).mediaScope,
+:global(.vv-media-widget).mediaScope
+  > :global(.elementor-widget-container).mediaScope,
+:global(.vv-media-tabs).mediaScope,
+:global(.vv-media-content).mediaScope {
+  width: 100%;
+  overflow: visible;
+}
+
+:global(.vv-media-tabs).mediaScope {
+  display: block;
+}
+
+
+/* =========================================================
+   TOP ROW
+   MEDIA + BUTTONS IN ONE SINGLE ROW
+========================================================= */
+
+:global(.vv-media-toolbar).mediaScope {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+
+  gap: 30px;
+
+  margin-bottom: 42px;
+}
+
+
+/* MEDIA TITLE */
+
+:global(.vv-media-toolbar).mediaScope
+  :global(h3).mediaScope {
+  margin: 0;
+
+  flex: 0 0 auto;
+
+  color: var(
+    --e-global-color-accent,
+    #111
+  );
+
+  font-size: clamp(36px, 5vw, 54px);
+  line-height: 1.08;
+
+  font-weight: 650;
+
+  letter-spacing: -0.04em;
+}
+
+
+/* =========================================================
+   TAB BUTTONS
+========================================================= */
+
+:global(.vv-media-buttons).mediaScope {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+
+  flex-wrap: nowrap;
+
+  gap: 10px;
+
+  margin-left: auto;
+}
+
+
+/* TAB */
+
+:global(.vv-media-tab).mediaScope {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 auto;
+
+  gap: 10px;
+
+  min-height: 49px;
+
+  padding: 11px 24px;
+
+  border-radius: 999px;
+
+  font-size: 15px;
+  line-height: 1;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease;
+}
+
+
+/* DEFAULT */
+
+:global(.vv-media-buttons).mediaScope
+  :global(.vv-media-tab).mediaScope {
+  border: 1px solid
+    var(
+      --e-global-color-border,
+      #dedede
+    );
+
+  background:
+    var(
+      --e-global-color-background,
+      #fff
+    );
+
+  color:
+    var(
+      --e-global-color-accent,
+      #111
+    );
+}
+
+
+/* HOVER */
+
+:global(.vv-media-buttons).mediaScope
+  :global(.vv-media-tab).mediaScope:hover {
+  background:
+    var(
+      --e-global-color-primary,
+      #e3ec64
+    );
+
+  border-color:
+    var(
+      --e-global-color-primary,
+      #e3ec64
+    );
+}
+
+
+/* ACTIVE */
+
+:global(.vv-media-buttons).mediaScope
+  :global(.vv-media-tab):global(.e-active).mediaScope,
+:global(.vv-media-buttons).mediaScope
+  :global(.vv-media-tab)[aria-selected='true'].mediaScope {
+  background:
+    var(
+      --e-global-color-primary,
+      #e3ec64
+    ) !important;
+
+  border-color:
+    var(
+      --e-global-color-primary,
+      #e3ec64
+    ) !important;
+
+  color: #111 !important;
+}
+
+
+/* =========================================================
+   TAB ICON
+========================================================= */
+
+:global(.vv-media-tab-svg).mediaScope {
+  display: inline-flex !important;
+
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 21px;
+
+  width: 21px;
+  height: 21px;
+
+  color: inherit;
+
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+:global(.vv-media-tab-svg).mediaScope
+  :global(svg) {
+  display: block !important;
+
+  width: 21px !important;
+  height: 21px !important;
+
+  opacity: 1 !important;
+  visibility: visible !important;
+
+  fill: none !important;
+  stroke: currentColor !important;
+}
+
+
+/* =========================================================
+   MEDIA CONTENT
+========================================================= */
+
+:global(.vv-media-content).mediaScope {
+  display: block;
+
+  width: 100%;
+
+  overflow: visible;
+}
+
+
+/* =========================================================
+   EMPTY
+========================================================= */
+
+:global(.vv-media-empty).mediaScope {
+  display: grid;
+  place-items: center;
+
+  min-height: 340px;
+
+  width: 100%;
+
+  padding: 30px;
+
+  text-align: center;
+
+  font-size: 18px;
+  font-weight: 500;
+
+  color: #666;
+
+  background: #f7f7f7;
+
+  border: 1px solid #eee;
+
+  border-radius: 24px;
+}
+
+
+/* =========================================================
+   VIDEO
+========================================================= */
+
+:global(.vv-video-frame).mediaScope {
+  width: 100%;
+
+  max-width: 1080px;
+
+  margin: 0 auto;
+}
+
+:global(.vv-video-frame).mediaScope
+  :global(iframe).mediaScope {
+  display: block;
+
+  width: 100%;
+
+  aspect-ratio: 16 / 9;
+
+  border: 0;
+
+  border-radius: 24px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 880px) {
+
+  :global(.vv-media-toolbar).mediaScope {
+    gap: 20px;
+
+    margin-bottom: 32px;
+  }
+
+  :global(.vv-media-tab).mediaScope {
+    min-height: 44px;
+
+    padding: 10px 17px;
+
+    font-size: 14px;
+
+    gap: 7px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  /*
+   * Keep heading separate only when the screen
+   * becomes too narrow.
+   */
+
+  :global(.vv-media-toolbar).mediaScope {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 18px;
+
+    margin-bottom: 28px;
+  }
+
+  :global(.vv-media-buttons).mediaScope {
+    width: 100%;
+
+    justify-content: flex-start;
+
+    flex-wrap: wrap;
+
+    margin-left: 0;
+
+    gap: 7px;
+  }
+
+  :global(.vv-media-tab).mediaScope {
+    padding: 9px 14px;
+
+    min-height: 42px;
+
+    font-size: 13px;
+  }
+
+  :global(.vv-media-empty).mediaScope {
+    min-height: 230px;
+  }
+
+}
